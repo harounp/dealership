@@ -1,0 +1,47 @@
+# == Schema Information
+#
+# Table name: cars
+#
+#  id           :integer          not null, primary key
+#  make         :string
+#  model        :string
+#  style        :string
+#  colour       :string
+#  seats        :integer
+#  range        :integer
+#  fuel         :string
+#  awd          :boolean
+#  transmission :boolean
+#  mileage      :integer
+#  price        :float
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make: MyString
+  model: MyString
+  style: MyString
+  colour: MyString
+  seats: 1
+  range: 1
+  fuel: MyString
+  awd: false
+  transmission: false
+  mileage: 1
+  price: 1.5
+
+two:
+  make: MyString
+  model: MyString
+  style: MyString
+  colour: MyString
+  seats: 1
+  range: 1
+  fuel: MyString
+  awd: false
+  transmission: false
+  mileage: 1
+  price: 1.5
