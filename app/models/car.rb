@@ -19,4 +19,7 @@
 #
 
 class Car < ApplicationRecord
+    def description
+        [colour, make, model].join(' ') 
+    end
 end

@@ -1,0 +1,20 @@
+h1
+    |Post a car for sale
+= form_with model: @car do |f|
+    .form-group
+    label Make 
+    = f.text_field :make, class: "form-control", placeholder: "Enter Make", required: true
+    label Model 
+    = f.text_field :model, class: "form-control", placeholder: "Enter Model", required: true
+    label Style 
+    = f.text_field :style, class: "form-control", placeholder: "Enter Style", required: true
+    label Colour 
+    = f.text_field :colour, class: "form-control", placeholder: "Enter Colour", required: true
+    label Seats 
+    = f.text_field :seats, class: "form-control", placeholder: "Enter number of seats", required: true
+    label Range 
+    = f.text_field :range, class: "form-control", placeholder: "Enter Range in kilometers", required: true
+    label Fuel 
+    = f.text_field :fuel, class: "form-control", placeholder: "Enter fuel type", required: true
+    
+    = f.submit "Submit",class: "btn btn-primary"
