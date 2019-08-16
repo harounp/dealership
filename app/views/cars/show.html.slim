@@ -1,0 +1,12 @@
+br
+h3
+    =@car.description
+    |  with 
+    =@car.seats 
+    |  seats, and a range of  
+    =@car.range 
+    |  km. This car runs on  
+    =@car.fuel
+    | . 
+br
+= link_to "This car is sold", car_path(@car), method: :delete

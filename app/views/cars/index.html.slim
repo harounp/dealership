@@ -2,6 +2,7 @@ h1
   | Cars for sale
 - @cars.each do |car|
   = link_to car.description, car_path(car)
+  br
 br
 br
 = link_to "New Vehicle for Sale", new_car_path

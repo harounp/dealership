@@ -15,7 +15,7 @@ class CarsController < ApplicationController
     end
 
     def show
-
+        @car = Car.find(params[:id])
     end
 
     def edit
@@ -27,13 +27,14 @@ class CarsController < ApplicationController
     end
 
     def destroy
-
+        Car.find(params[:id]).destroy
+        redirect_to cars_url
     end
 
     private 
 
     def car_params
-        params.require(:car).permit(:make, :model, :style, :colour, :seats ,:range, :fuel) 
+        params.require(:car).permit(:id, :make, :model, :style, :colour, :seats ,:range, :fuel) 
     end
 
 end
