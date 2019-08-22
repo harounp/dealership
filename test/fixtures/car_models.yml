@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: car_models
+#
+#  id          :integer          not null, primary key
+#  model       :string
+#  car_make_id :integer
+#  range       :integer
+#  seats       :integer
+#  fuel        :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  CarMake: one
+  range: 1
+  seats: 1
+  fuel: MyString
+
+two:
+  model: MyString
+  CarMake: two
+  range: 1
+  seats: 1
+  fuel: MyString

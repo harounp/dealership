@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: car_makes
+#
+#  id         :integer          not null, primary key
+#  make       :string
+#  country    :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make: MyString
+  country: MyString
+
+two:
+  make: MyString
+  country: MyString

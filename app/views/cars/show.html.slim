@@ -1,5 +1,7 @@
 br
 h3
+    = image_tag ("car.jpeg"), class: "img-responsive", width: "400"
+    br
     =@car.description
     |  with 
     =@car.seats 
@@ -9,4 +11,4 @@ h3
     =@car.fuel
     | . 
 br
-= link_to "This car is sold", car_path(@car), method: :delete
+= link_to "Is this car sold? Click here!", car_path(@car), method: :delete
