@@ -1,16 +1,18 @@
-.container-fluid
+.container
   h1
     | Cars for sale
   .row
     - @cars.each do |car|
       .col
-        .card.bg-secondary.text-white style="width:400px"
+        .card.bg-secondary.text-white style="width:500px"
           a href= car_path(car)
-            = image_tag ("car.jpeg"), class: "img-responsive", width: "400"
-          / img class="card-img-top" scr="images/car.jpeg" alt="Card image"
+            = image_tag (car.car_photo) if car.car_photo.attached?
+            = image_tag ("car.jpeg") unless car.car_photo.attached?
           .card-body.car_link 
-            = link_to "This is a car", car_path(car)
+            = link_to car.description, car_path(car)
         br
           
   br
-  = link_to "New Vehicle for Sale", new_car_path
+  = link_to "New Vehicle for Sale", new_car_path, class: "btn btn-secondary"
+  br
+  | FOOTER

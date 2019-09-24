@@ -5,8 +5,6 @@
 #  id          :integer          not null, primary key
 #  model       :string
 #  car_make_id :integer
-#  range       :integer
-#  seats       :integer
 #  fuel        :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null

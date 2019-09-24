@@ -6,7 +6,25 @@
     a {
         color: white; 
         &:hover{
-            color: #666;
+            color: rgb(207, 207, 207);
         }
     }
   }
+.card {
+    width: 1000px
+}
+
+.card-header{
+    text-align: center;
+}
+
+.card-img-left {
+    width: 50%;
+}
+
+
+
+img{
+    width: 100%;
+    border-radius: 2px;
+}

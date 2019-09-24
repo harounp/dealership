@@ -5,8 +5,6 @@
 #  id           :integer          not null, primary key
 #  style        :string
 #  colour       :string
-#  awd          :boolean
-#  transmission :boolean
 #  mileage      :integer
 #  price        :float
 #  created_at   :datetime         not null

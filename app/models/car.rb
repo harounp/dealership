@@ -5,8 +5,6 @@
 #  id           :integer          not null, primary key
 #  style        :string
 #  colour       :string
-#  awd          :boolean
-#  transmission :boolean
 #  mileage      :integer
 #  price        :float
 #  created_at   :datetime         not null
@@ -15,9 +13,17 @@
 #
 
 class Car < ApplicationRecord
-    belongs_to :CarModel 
+    belongs_to :CarModel , optional: true
     has_one_attached :car_photo
-    # def description
-    #     [colour, make, model].join(' ') 
-    # end
+    def description
+        [make.make, model.model].join(' ') 
+    end
+    
+    def model 
+        CarModel.find(car_model_id)
+    end
+
+    def make
+        CarMake.find(model.car_make_id)
+    end
 end

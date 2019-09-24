@@ -1,14 +1,12 @@
-br
-h3
-    = image_tag ("car.jpeg"), class: "img-responsive", width: "400"
-    br
-    =@car.description
-    |  with 
-    =@car.seats 
-    |  seats, and a range of  
-    =@car.range 
-    |  km. This car runs on  
-    =@car.fuel
-    | . 
-br
-= link_to "Is this car sold? Click here!", car_path(@car), method: :delete
+.container 
+    .card 
+        .card-header.bg-secondary 
+            h3 
+                =@car.description
+        .card-body
+            .card-img-left
+                = image_tag (@car.car_photo) if @car.car_photo.attached?
+                = image_tag ("car.jpeg") unless @car.car_photo.attached?
+            .card-right
+                |Test
+        = link_to "Is this car sold? Click here to delete your post!", car_path(@car), method: :delete, class: "btn btn-secondary"
