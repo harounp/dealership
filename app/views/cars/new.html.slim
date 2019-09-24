@@ -6,14 +6,14 @@
             = form_with model: @car, remote: true do |f|
                 .form-group
                     label Make: &nbsp 
-                    = f.collection_select nil, @car_makes, :id, :make, {include_blank: "Select a Make", required: true}, class: "form-control"
+                    = select_tag 'make', options_from_collection_for_select(@car_makes, 'id', 'make'), prompt: "Select a car make", class: "form-control"
                 .form-group
                     label Model: &nbsp 
                     #available-car-models    
-                        = f.collection_select :car_model_id, @car_models, :id, :model,{include_blank: "Select a Model", required: true}, class: "form-control"
+                        = f.collection_select :car_model_id, @car_models, :id, :model, {prompt: "Select a Model"}, class: "form-control"
                 .form-group
                     label Style: &nbsp
-                    = f.select :style, options_for_select(['Sedan', 'Hatchback', 'Coup', 'Van', 'SUV']), {include_blank:  "Select a Style", required: true}, class: "form-control"
+                    = f.select :style, options_for_select(['Sedan', 'Hatchback', 'Coup', 'Van', 'SUV']), {prompt:  "Select a Style"}, class: "form-control"
                 .form-group
                     label Colour &nbsp
                     = f.color_field :colour, required: true
@@ -25,6 +25,6 @@
                     = f.number_field :price, class: "form-control", placeholder: "Enter the asking price", min: 0, required: true
                 .form-group
                     label Upload a Car Photo 
-                    div = f.file_field :car_photo
+                    = f.file_field :car_photo, class: "form-control"
                     br 
                     = f.submit "Submit",class: "btn btn-primary"
